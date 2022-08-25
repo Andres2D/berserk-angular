@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  .big-input {
+    margin-top: 100px;
+    padding: 20px;
+    width: 50%;
+    border: 10px solid #013f6e;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #013f6e;
+  }
+}
