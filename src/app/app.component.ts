@@ -9,6 +9,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'async-input';
+  clientFeedback: string[] = [];
   bigInput: FormControl = new FormControl('');
   
   ngOnInit(): void {
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit {
       distinctUntilChanged()
     )
     .subscribe((value) => {
-      console.log(value);
+      this.clientFeedback.push(`{ Send request to backend for: ${value} }`);
     });  
   }
 }
