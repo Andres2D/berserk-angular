@@ -19,6 +19,10 @@ export class AppComponent implements OnInit {
       distinctUntilChanged()
     )
     .subscribe((value) => {
+      if(!value || value.trim() === ''){
+        return;
+      }
+      
       this.clientFeedback.push(`{ Send request to backend for: ${value} }`);
     });  
   }
