@@ -10,6 +10,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'async-input';
   clientFeedback: string[] = [];
+  filterNames: string[] = [];
   bigInput: FormControl = new FormControl('');
   
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class AppComponent implements OnInit {
       if(!value || value.trim() === ''){
         return;
       }
-      
+
       this.clientFeedback.push(`{ Send request to backend for: ${value} }`);
     });  
   }
