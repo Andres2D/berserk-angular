@@ -6,7 +6,11 @@
     class="big-input"
     placeholder="Type a text"
     [formControl]="bigInput"
+    list="names"
   />
+  <ul class="list">
+    <li *ngFor="let name of filterNames" class="item">{{name}}</li>
+  </ul>
   <ng-container *ngFor="let feedback of clientFeedback">
     <h3 class="feedback">🚀🌐 {{feedback}}</h3>
   </ng-container>
