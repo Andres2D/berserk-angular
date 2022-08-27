@@ -3,14 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FakePageComponent } from './pages/fake-page/fake-page.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MainComponent } from './pages/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FakePageComponent
+    FakePageComponent,
+    MainComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
