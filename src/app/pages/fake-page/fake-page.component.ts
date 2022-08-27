@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Article } from '../../interfaces/article.interface';
 
 @Component({
   selector: 'app-fake-page',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FakePageComponent implements OnInit {
 
-  constructor() { }
+  article?: Article;
+
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const { article } = this.activatedRoute.snapshot.data;
+    this.article = article;
   }
 
 }
