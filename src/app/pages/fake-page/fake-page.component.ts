@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fakeArticle } from '../../constants/fake-article';
 
 @Component({
   selector: 'app-fake-page',
@@ -8,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class FakePageComponent implements OnInit {
 
   skeletonContent: Array<any> = Array.from({length: 27});
+  articleContent = {
+    title: '',
+    content: '',
+    author: ''
+  };
 
-  constructor() { }
-
-  ngOnInit(): void {
+  get hasContent() {
+    const { 
+      title,
+      content,
+      author
+    } = this.articleContent;
+    return (title === '' || content === '' || author === '') ? false : true;
   }
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.articleContent = fakeArticle;
+    },
+    2000);
+  }
 }
