@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" *ngIf="true">
   <h1>This is a fake article</h1>
   <article class="article">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ad aspernatur deserunt amet molestias officia
@@ -30,4 +30,12 @@
     laudantium rem.
   </article>
   <p class="author">- by Lorem</p>
+</section>
+
+<section class="container skeleton" *ngIf="true">
+  <div class="title-skeleton"></div>
+  <div class="content">
+    <div class="text-skeleton" *ngFor="let item of skeletonContent"></div>
+    <div class="author-skeleton"></div>
+  </div>
 </section>
