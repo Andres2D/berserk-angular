@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FakePageComponent implements OnInit {
 
+  skeletonContent: Array<any> = Array.from({length: 27});
+
   constructor() { }
 
   ngOnInit(): void {
