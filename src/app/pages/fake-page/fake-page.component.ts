@@ -8,7 +8,7 @@ import { fakeArticle } from '../../constants/fake-article';
 })
 export class FakePageComponent implements OnInit {
 
-  skeletonContent: Array<any> = Array.from({length: 27});
+  skeletonContent: Array<any> = Array.from({length: 21});
   articleContent = {
     title: '',
     content: '',

@@ -14,15 +14,6 @@ export const fakeArticle = {
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore, ab, fuga eaque recusandae tempora nobis
     accusantium obcaecati numquam, similique sequi doloribus quae. Ex dolore, ullam magni quibusdam tempore tenetur.
 
-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis ducimus suscipit, praesentium quas sapiente
-    mollitia ipsa voluptate dolorum fugit sequi provident quibusdam maiores porro cumque, sed sint unde! Ad.
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste fuga tempore voluptatibus eius consequuntur debitis
-    ipsam laboriosam ducimus culpa, eaque dolor dolores! Maxime omnis non assumenda, eius architecto amet eaque.
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur deserunt ut a voluptates quae unde ipsam?
-    Ipsam quibusdam quos ratione optio accusantium, placeat voluptas beatae dignissimos maxime, quidem cumque
-    asperiores.
-
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nesciunt totam ab quo itaque! Quod numquam
     voluptate, deleniti sequi ab consectetur repudiandae. Minus ipsum nihil quae similique id cumque quaerat?
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate excepturi nesciunt voluptatum. Repudiandae
