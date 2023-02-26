@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 <p>App works!</p>
+=======
+<div class="container">
+  <input 
+    class="big-input"
+    placeholder="Type a text"
+    [formControl]="bigInput"
+  />
+  <ng-container *ngFor="let feedback of clientFeedback">
+    <h3 class="feedback">🚀🌐 {{feedback}}</h3>
+  </ng-container>
+  
+</div>
+>>>>>>> dcd2091 (Add client feedback)
