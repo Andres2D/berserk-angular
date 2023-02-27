@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'async-input';
+  title = 'paginator';
+  pages: number = 10;
+  currentPage: number = 1;
+
+  changePage(page: number): void {
+    this.currentPage = page;
+  }
 }

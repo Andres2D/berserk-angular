@@ -1,6 +1,7 @@
 $mineshaft: #333;
 $ceiling: #3BACEE;
 $disabled: #E2E4E9;
+$not-allowed: #8A8A8A;
 
 @mixin arrow() {
   content: '';
@@ -48,7 +49,7 @@ $disabled: #E2E4E9;
   cursor: not-allowed;
   
   &::after {
-    border-color: $disabled;
+    border-color: $not-allowed;
   }
 }
 

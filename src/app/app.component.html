@@ -1,1 +1,5 @@
-<app-paginator></app-paginator>
+<app-paginator 
+  [pages]="pages" 
+  [currentPage]="currentPage" 
+  (gotToPageEvent)="changePage($event)">
+</app-paginator>
