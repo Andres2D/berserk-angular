@@ -14,13 +14,16 @@ import {
 export class PaginatorComponent implements OnInit {
   @Input() pages: number = 0;
   @Input() currentPage: number = 0;
+  @Input() visiblePages: number = 0;
   
   @Output() gotToPageEvent = new EventEmitter<number>();
 
   fullPagesList: number[] = [];
   pagesToShow: number[] = [];
+  pagesDifferential = 0;
 
   ngOnInit(): void {
+    this.pagesDifferential = (this.visiblePages / 2);
     this.fullPagesList = Array.from({length: this.pages}).map((_, i) => i+1);
     this.definePagesButtons(this.currentPage);
   }
@@ -31,18 +34,18 @@ export class PaginatorComponent implements OnInit {
 
       pagesArray = [...pagesArray.slice(page - 1, pagesArray.length)];
 
-      if(pagesArray.length > 4) {
+      if(pagesArray.length > this.visiblePages) {
         pagesArray = [
-          ...pagesArray.splice(0, 2), 
+          ...pagesArray.splice(0, this.pagesDifferential), 
           -1, 
-          ...pagesArray.splice(pagesArray.length - 2, pagesArray.length)
+          ...pagesArray.splice(pagesArray.length - this.pagesDifferential, pagesArray.length)
         ];
         this.pagesToShow = pagesArray;
-      } else if(pagesArray.length === 4) {
+      } else if(pagesArray.length === this.visiblePages) {
         pagesArray = [
           -1, 
-          ...pagesArray.splice(0, 2), 
-          ...pagesArray.splice(pagesArray.length - 2, pagesArray.length)
+          ...pagesArray.splice(0, this.pagesDifferential), 
+          ...pagesArray.splice(pagesArray.length - this.pagesDifferential, pagesArray.length)
         ];
         this.pagesToShow = pagesArray;
       }
