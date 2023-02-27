@@ -1,0 +1,14 @@
+<app-page-button 
+  [leftArrow]="true"
+  [disabled]="currentPage === 1"
+></app-page-button>
+<ng-container *ngFor="let page of fullPagesList">
+  <app-page-button 
+    [number]="page !== -1 ? page : undefined"
+    [current]="page === currentPage"
+  ></app-page-button>
+</ng-container>
+<app-page-button 
+  [rightArrow]="true"
+  [disabled]="currentPage === pages"
+></app-page-button>
