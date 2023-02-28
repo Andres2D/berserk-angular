@@ -1,6 +1,13 @@
-<app-paginator 
-  [pages]="pages" 
-  [currentPage]="currentPage" 
-  [visiblePages]="6"
-  (gotToPageEvent)="changePage($event)">
-</app-paginator>
+<div class="container">
+  <section class="content">
+    <ng-container *ngFor="let box of contentToShow">
+      <div class="box">Box {{box}}</div>
+    </ng-container>
+  </section>
+  <app-paginator 
+    [pages]="pages"
+    [currentPage]="currentPage"
+    [visiblePages]="2"
+    (gotToPageEvent)="changePage($event)">
+  </app-paginator>
+</div>

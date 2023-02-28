@@ -23,13 +23,13 @@ export class PaginatorComponent implements OnInit {
   pagesDifferential = 0;
 
   ngOnInit(): void {
-    this.pagesDifferential = (this.visiblePages / 2);
+    this.pagesDifferential = Math.floor(this.visiblePages / 2);
     this.fullPagesList = Array.from({length: this.pages}).map((_, i) => i+1);
     this.definePagesButtons(this.currentPage);
   }
 
   definePagesButtons(page: number): void {
-    if(this.pages > 5) {
+    if(this.pages > this.visiblePages) {
       let pagesArray = [...this.fullPagesList];
 
       pagesArray = [...pagesArray.slice(page - 1, pagesArray.length)];
@@ -49,6 +49,8 @@ export class PaginatorComponent implements OnInit {
         ];
         this.pagesToShow = pagesArray;
       }
+    } else {
+      this.pagesToShow = [...this.fullPagesList];
     }
   }
 
