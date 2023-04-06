@@ -1,1 +1,17 @@
-<p>App works!</p>
+<h1 class="title">Hey Patricio...</h1>
+<section class="section">
+  <img 
+    src="https://www.freeiconspng.com/thumbs/cartoon-characters-png/old-patrick-star-cartoon-characters-spongebob-png-27.png" 
+    width="200px"
+    alt="character"
+  >
+  <div class="actions">
+    <textarea class="text" name="" id="" cols="30" rows="10" [formControl]="response">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod rem consequuntur expedita sit delectus provident aperiam cupiditate, quasi cumque, quaerat et enim, dignissimos debitis fugiat inventore qui repudiandae possimus doloribus!
+    </textarea>
+    <button class="action" (click)="ask('joke')">Tell me a joke</button>
+    <button class="action" (click)="ask('quote')">Say something wise</button>
+    <button class="action" (click)="ask('wordle')">Wordle today's word?</button>
+    <button class="action" (click)="ask('should')">Should I do it?</button>
+  </div>
+</section>
